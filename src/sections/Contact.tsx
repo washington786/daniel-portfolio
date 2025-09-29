@@ -1,75 +1,58 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, PhoneIcon, AcademicCapIcon } from "@heroicons/react/24/solid"; // Added AcademicCapIcon for LinkedIn
 import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-20 bg-white">
-            <div className="max-w-6xl mx-auto px-4">
+        <section id="contact" className="py-20 bg-gray-50">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                     className="text-4xl font-bold mb-12 text-center text-gray-900"
                 >
-                    Let's Talk
+                    Get In Touch
                 </motion.h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-semibold text-gray-900">Get in Touch</h3>
-                        <p className="text-gray-600">
-                            Have a project in mind? Reach out—I’d love to hear about it!
+                        <h3 className="text-2xl font-semibold text-gray-900">Let's Connect</h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            {/* Updated message */}
+                            I'm actively seeking new opportunities to leverage my skills in full-stack development. Feel free to reach out via email or phone, or connect with me on LinkedIn. I'd be happy to discuss potential projects or opportunities.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
-                                <EnvelopeIcon className="w-6 h-6 text-indigo-600" />
-                                <span className="text-gray-700">dkmawasha@gmail.com</span>
+                                <div className="p-2 bg-indigo-100 rounded-lg">
+                                    <EnvelopeIcon className="w-6 h-6 text-indigo-600" />
+                                </div>
+                                <span className="text-gray-700 font-medium">dkmawasha@gmail.com</span>
                             </div>
                             <div className="flex items-center gap-4">
-                                <PhoneIcon className="w-6 h-6 text-indigo-600" />
-                                <span className="text-gray-700">+27 (81) 276-7830</span>
+                                <div className="p-2 bg-indigo-100 rounded-lg">
+                                    <PhoneIcon className="w-6 h-6 text-indigo-600" />
+                                </div>
+                                <span className="text-gray-700 font-medium">+27 (81) 276-7830</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <div className="p-2 bg-indigo-100 rounded-lg">
+                                    <AcademicCapIcon className="w-6 h-6 text-indigo-600" />
+                                </div>
+                                <a
+                                    href="https://www.linkedin.com/in/daniel-mawasha-05305a226"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-indigo-600 font-medium hover:underline"
+                                >
+                                    LinkedIn Profile
+                                </a>
                             </div>
                         </div>
                     </motion.div>
-                    {/* <motion.form
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-gray-100"
-                    >
-                        <div className="space-y-6">
-                            <div>
-                                <label className="block text-gray-700 mb-2">Name</label>
-                                <input
-                                    type="text"
-                                    className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700 mb-2">Email</label>
-                                <input
-                                    type="email"
-                                    className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700 mb-2">Message</label>
-                                <textarea
-                                    rows={4}
-                                    className="w-full px-4 py-3 bg-transparent border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                                ></textarea>
-                            </div>
-                            <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                                type="submit"
-                                className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-indigo-400/20 transition-all"
-                            >
-                                Send Message
-                            </motion.button>
-                        </div>
-                    </motion.form> */}
                 </div>
             </div>
         </section>
